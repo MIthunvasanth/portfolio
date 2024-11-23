@@ -1,0 +1,22 @@
+.mouse-follower {
+    position: fixed;
+    width: 20px; /* Increased size for better visibility */
+    height: 20px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6));
+    border-radius: 50%; /* Keeps it circular */
+    pointer-events: none; /* Ensures it doesn't block clicks */
+    transform: translate(-50%, -50%);
+    mix-blend-mode: overlay; /* Blends nicely with backgrounds */
+    z-index: 9999; /* Always on top */
+    transition: transform 0.1s ease, opacity 0.3s ease, width 0.2s, height 0.2s; /* Smooth animations */
+    will-change: transform, width, height; /* Optimized for smoothness */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.5);
+  }
+  
+  .mouse-follower:hover {
+    width: 40px; /* Expands when hovering over elements */
+    height: 40px;
+    opacity: 0.9; /* Slightly increases opacity */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 40px rgba(255, 255, 255, 0.6);
+  }
+  

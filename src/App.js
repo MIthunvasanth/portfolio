@@ -8,12 +8,24 @@ import Contact from "./contact/Contact";
 import "./styles/app.css";
 import Background from "./background/Background.js";
 import PlayerStats from "./playerStats/PlayerStats.js";
-
+import MouseFollower from "./mouse/mouse.js";
 const App = () => {
+  const options = {
+    zIndex: 2,
+    backgroundColor: 'red',
+    radius: 60,
+    text: 'Sample Text',
+    textColor: 'white',
+    textFontFamily: 'sans-serif',
+    textFontSize: '25px',
+  };
   return (
+    
     <Router>
+      <MouseFollower/>
       <Nav />
       <Background />
+
       <Routes>
         <Route path="/" element={<About />} />
         <Route path="/skills" element={<Skills />} />

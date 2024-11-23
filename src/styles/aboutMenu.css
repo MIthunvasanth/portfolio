@@ -39,6 +39,8 @@
   cursor: default;
 }
 
+
+
 .item.active:nth-child(1) {
   background: linear-gradient(90deg, var(--transparent), var(--purple) 70%);
   border-radius: var(--radius-right);
